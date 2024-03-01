@@ -6,6 +6,8 @@ import Select from "./Select";
 import Select2 from "./Select2";
 import Calender from "./Calender";
 import Guest from "./Guest";
+import Search from "./Search";
+import Card from "./Card";
 
 const Navbar = () => {
 
@@ -28,35 +30,30 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-72 sm:h-96 md:h-[540px] lg:h-[640px] xl:h-[780px] flex flex-col items-center justify-center gap-5 lg:gap-10 bg-cover bg-center before:absolute before:bg-black/50 before:inset-0 transform duration-1000 ease-linear"
+      <div>
+        <div className="w-full h-72 sm:h-96 md:h-[540px] lg:h-[640px] xl:h-[780px] flex flex-col items-center justify-center gap-5 lg:gap-10 bg-cover bg-center before:absolute before:bg-black/50 before:inset-0 transform duration-1000 ease-linear"
 
-        style={{ backgroundImage: `url(${sliders[currentSlider].img})` }}>
+          style={{ backgroundImage: `url(${sliders[currentSlider].img})` }}>
 
-        {/* text container here */}
+          {/* text container here */}
 
-        <div className="drop-shadow-lg text-white text-center px-5">
+          <div className="drop-shadow-lg text-white text-center px-5">
 
-          <h1 className="text-xl lg:text-7xl font-semibold mb-3">{sliders[currentSlider].title}</h1>
-          <p className="mt-3">689 | Reviews </p>
-          <button className="mt-8 text-sm w-56 h-14 before:absolute border-[1px] border-slate-50 before:block before:inset-0 before:-z-10 before:bg-none text-white after:block hover:after:w-full after:w-0 after:hover:left-0 after:right-0 after:top-0 after:h-full after:-z-10 after:duration-300 after:bg-orange-400 after:absolute relative  inline-block">Take Me There </button>
+            <h1 className="text-xl lg:text-7xl font-semibold mb-3">{sliders[currentSlider].title}</h1>
+            <p className="mt-3">689 | Reviews </p>
+            <button className="mt-8 text-sm w-56 h-14 before:absolute border-[1px] border-slate-50 before:block before:inset-0 before:-z-10 before:bg-none text-white after:block hover:after:w-full after:w-0 after:hover:left-0 after:right-0 after:top-0 after:h-full after:-z-10 after:duration-300 after:bg-orange-400 after:absolute relative  inline-block">Take Me There </button>
 
+          </div>
         </div>
-
+        <div className="flex justify-center">
+          <Select></Select>
+          <Select2></Select2>
+          <Calender></Calender>
+          <Guest></Guest>
+          <Search></Search>
+        </div>
+        <Card></Card>
       </div>
-
-      {/* slider container */}
-
-      <div className="flex justify-center items-center gap-3 p-2">
-      </div>
-
-      <div className="flex">
-        <Select></Select>
-        <Select2></Select2>
-        <Calender></Calender>
-        <Guest></Guest>
-      </div>
-
-
     </>
   );
 };

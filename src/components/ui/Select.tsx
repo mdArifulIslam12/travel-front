@@ -16,7 +16,7 @@ const Select = () => {
 
     return (
         <div>
-            <div onClick={() => setIsOpen(!isOpen)} className="mx-auto flex w-72 items-center justify-between rounded-sm border-[1px] border-gray-400 bg-white px-6 py-2">
+            <div onClick={() => setIsOpen(!isOpen)} className="mx-auto h-12 flex w-72 items-center justify-between rounded-sm border-[1px] border-gray-400 bg-white px-6 py-2">
 
                 <h1 className="font-medium text-gray-600">{selectedValue}</h1>
 

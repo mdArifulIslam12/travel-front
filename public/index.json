@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1",
+        "tag": "Popular",
+        "price": "$1500",
+        "img": "https://i.ibb.co/HxSx8h1/tour-13-820x520.jpg",
+        "location": "Sigiriya, Colombo",
+        "title": "Broome to the Bungle Bungles",
+        "day": "7 days",
+        "ratings": 4.8
+    },
+    {
+        "id": "2",
+        "tag": "Popular",
+        "price": "$1200",
+        "img": "https://i.ibb.co/T47H2n6/tour-4-820x520.jpg",
+        "location": "Patagonia,Chile",
+        "title": "Sydney to Brisbane adventure",
+        "day": "5 days",
+        "ratings": 4.5
+    },
+    {
+        "id": "3",
+        "tag": "Popular",
+        "price": "$2000",
+        "img": "https://i.ibb.co/zrrczTp/tour-11-820x520.jpg",
+        "location": "Barcelona, Spain",
+        "title": "Experience Greece: Athens",
+        "day": "8 days",
+        "ratings": 4.7
+    },
+    {
+        "id": "4",
+        "tag": "Popular",
+        "price": "$2500",
+        "img": "https://i.ibb.co/2kCfX2B/tour-16-820x520.jpg",
+        "location": "Budapest, Hungary",
+        "title": "Wonders of the West Coast &",
+        "day": "10 days",
+        "ratings": 4.9
+    },
+    {
+        "id": "5",
+        "tag": "Popular",
+        "price": "$1800",
+        "img": "https://i.ibb.co/FhDC5sr/tour-19-820x520.jpg",
+        "location": "Tokyo, Japan",
+        "title": "Trek the Cradle Mountain Hill",
+        "day": "6 days",
+        "ratings": 4.6
+    },
+    {
+        "id": "6",
+        "tag": "",
+        "price": "$1600",
+        "img": "https://i.ibb.co/9n0yyqH/tour-8-820x520.jpg",
+        "location": "London, England",
+        "title": "Discovery Island Kayak Tour",
+        "day": "7 days",
+        "ratings": 4.7
+    },
+    {
+        "id": "7",
+        "tag": "",
+        "price": "$3000",
+        "img": "https://i.ibb.co/19mjzdK/tour-10-820x520.jpg",
+        "location": "Shanghai, China",
+        "title": "Maldivs Sightseeing adventure Tour",
+        "day": "10 days",
+        "ratings": 4.8
+    },
+    {
+        "id": "8",
+        "tag": "10% off",
+        "price": "$1400",
+        "img": "https://i.ibb.co/tBcv3vj/tour-2-820x520.jpg",
+        "location": "Chukhung, Nepal",
+        "title": "Casablanca Valley Wine Testing Day",
+        "day": "5 days",
+        "ratings": 4.5
+    },
+    {
+        "id": "9",
+        "tag": "Popular",
+        "price": "$2200",
+        "img": "https://i.ibb.co/v1DxXkg/tour-18-820x520.jpg",
+        "location": "Galapagos Islands, Ecuador",
+        "title": "Galapagos Wildlife Safari park",
+        "day": "8 days",
+        "ratings": 4.9
+    },
+    {
+        "id": "10",
+        "tag": "10% off",
+        "price": "$1700",
+        "img": "https://i.ibb.co/vJZPtYV/tour-17-820x520.jpg",
+        "location": "Bora Bora, French Polynesia",
+        "title": "Bora Bora Luxury Retreat Hotel",
+        "day": "7 days",
+        "ratings": 4.7
+    }
+]
