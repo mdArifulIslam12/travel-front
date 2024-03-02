@@ -1,0 +1,33 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "bg-color": "#F0F8FF",
+        "title": "Memorable Experiences",
+        "description": "Browse and book tours and activities so incredible",
+        "img": "https://i.ibb.co/Pt5P3kF/4047421-account-experience-person-persona-profile-icon.png"
+      },
+      {
+        "id": 2,
+        "bg-color": "#FFE4E1",
+        "title": "Ultimate flexibility",
+        "description": "You're in control, with free cancellation and payement options",
+        "img": "https://i.ibb.co/y8fVX42/11405571-flexibility-agility-flexible-pipe-soft-tube-flexible-icon.png"
+      },
+      {
+        "id": 3,
+        "bg-color": "#F5F5DC",
+        "title": "Extended Customization",
+        "description": "Hand-tailor your tour until it fits your need",
+        "img": "https://i.ibb.co/dJ882d3/2305627-brush-color-customization-layout-paint-icon.png"
+      },
+      {
+        "id": 4,
+        "bg-color": "#FFE4E1",
+        "title": "Customer Satisfaction",
+        "description": "We deliver beyond your expectation",
+        "img": "https://i.ibb.co/cv2dSjX/3802004-customer-mind-satisfaction-service-support-icon.png"
+      }
+    ]
+  }
+  

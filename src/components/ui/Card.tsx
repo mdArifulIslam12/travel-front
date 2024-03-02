@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { GoStopwatch } from "react-icons/go";
+import { motion } from "framer-motion"
 
 const Card = () => {
 
@@ -48,7 +49,7 @@ const Card = () => {
             <div className="carousel-container">
                 <div className="carousel mt-12 justify-center flex overflow-x-auto space-x-4">
                     {data.slice(currentIndex, currentIndex + 4).map((item) => (
-                        <div
+                        <motion.div whileHover={{scale:1.05}}
                             key={item.id}
                             className="card w-72 inset-0 bg-black opacity-90 h-96 rounded-sm shadow-lg overflow-hidden"
                             style={{ backgroundImage: `url(${item.img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -69,10 +70,10 @@ const Card = () => {
                                     <button className="mt- mb-8 text-sm w-56 h-14 before:absolute border-[1px] border-slate-50 before:block before:inset-0 before:-z-10 before:bg-none text-black after:block hover:after:w-full after:w-0 after:hover:left-0 after:right-0 after:top-0 after:h-full after:-z-10 after:duration-300 after:bg-orange-400 after:absolute relative  inline-block">More Information </button>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-                <div className="flex justify-between mt-4">
+                <div className="flex justify-center mt-4">
                     <button
                         className=" text-white font-bold py-2 px-4 rounded"
                         onClick={prevSlide}
