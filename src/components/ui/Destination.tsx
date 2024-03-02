@@ -1,4 +1,12 @@
+import { motion } from "framer-motion";
+
+
+
 const Destination = () => {
+
+
+
+
     return (
         <div className="">
             <div className="relative">
@@ -13,15 +21,16 @@ const Destination = () => {
                 <p className="text-3xl text-center mt-6 text-black font-bold">Top Attractions <br /> Destinations</p>
             </div>
             <div className="flex gap-4 justify-center mt-9">
-                <img className="h-72 w-[600px]" src="https://i.ibb.co/DYvnfYb/location2.jpg" alt="" />
-                <img className="h-72 w-[600px]" src="https://i.ibb.co/Hzh02T8/location19.jpg" alt="" />
+                <motion.img initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} className="h-72 w-[600px]" src="https://i.ibb.co/DYvnfYb/location2.jpg" alt="" />
+                <motion.img initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} className="h-72 w-[600px]" src="https://i.ibb.co/Hzh02T8/location19.jpg" alt="" />
             </div>
             <div className="flex gap-8 mt-8 justify-center">
-                <img className="w-[384px] cursor-pointer h-80" src="https://i.ibb.co/7v6NJLj/location1.jpg" alt="" />
-                <img className="w-[384px] cursor-pointer h-80" src="https://i.ibb.co/S0SySYT/location7.jpg" alt="" />
-                <div>
+                <motion.img initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} className="w-[384px] cursor-pointer h-80" src="https://i.ibb.co/7v6NJLj/location1.jpg" alt="" />
+                <motion.img initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} className="w-[384px] cursor-pointer h-80" src="https://i.ibb.co/S0SySYT/location7.jpg" alt="" />
+                <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.1 }}>
                     <img className="w-[384px] cursor-pointer h-80" src="https://i.ibb.co/0jN8c1H/location4.jpg" alt="" />
-                </div>
+                </motion.div>
+
             </div>
         </div>
     );
