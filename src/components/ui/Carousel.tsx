@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -54,9 +55,6 @@ const Carousel = () => {
                         src={slide.img} className={`w-10 md:w-20 h-6 sm:h-8 md:h-12 bg-black/20 ${currentSlider === inx ? 'border-2 border-black p-px' : ''} rounded-md md:rounded-lg box-content cursor-pointer`}
 
                         alt={slide.title} />
-
-
-
                 ))}
 
             </div>

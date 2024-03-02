@@ -9,6 +9,7 @@ import Guest from "./Guest";
 import Search from "./Search";
 import Card from "./Card";
 import Expereience from "./Expereience";
+import Destination from "./Destination";
 
 const Navbar = () => {
 
@@ -55,6 +56,7 @@ const Navbar = () => {
         </div>
         <Card></Card>
         <Expereience></Expereience>
+        <Destination></Destination>
       </div>
     </>
   );
