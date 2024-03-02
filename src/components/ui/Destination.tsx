@@ -1,12 +1,10 @@
+'use client'
 import { motion } from "framer-motion";
 
+import { createContext } from 'react'
 
 
 const Destination = () => {
-
-
-
-
     return (
         <div className="">
             <div className="relative">
