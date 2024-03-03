@@ -1,0 +1,72 @@
+[
+    {
+        "img": "https://i.ibb.co/tDg2mmV/tour-1-820x520.jpg",
+        "location": "Paris, France",
+        "title": "Exploring the City of Lights",
+        "days": 5,
+        "price": 1500
+    },
+    {
+        "img": "https://i.ibb.co/Sx13vjj/tour-2-820x520.jpg",
+        "location": "Tokyo, Japan",
+        "title": "Discovering the Land of the Rising Sun",
+        "days": 7,
+        "price": 2500
+    },
+    {
+        "img": "https://i.ibb.co/B3mbJYw/tour-17-820x520.jpg",
+        "location": "Rome, Italy",
+        "title": "Ancient Wonders of Rome",
+        "days": 4,
+        "price": 1200
+    },
+    {
+        "img": "https://i.ibb.co/hF044Ft/tour-18-820x520.jpg",
+        "location": "Cancun, Mexico",
+        "title": "Sun-soaked Getaway in Cancun",
+        "days": 6,
+        "price": 1800
+    },
+    {
+        "img": "https://i.ibb.co/RYy9rD9/tour-14-820x520.jpg",
+        "location": "Sydney, Australia",
+        "title": "Adventures Down Under",
+        "days": 8,
+        "price": 2800
+    },
+    {
+        "img": "https://i.ibb.co/QNgV8Y5/tour-16-820x520.jpg",
+        "location": "New York City, USA",
+        "title": "The Big Apple Experience",
+        "days": 3,
+        "price": 1000
+    },
+    {
+        "img": "https://i.ibb.co/5kP8XfJ/tour-11-820x520.jpg",
+        "location": "Barcelona, Spain",
+        "title": "Savoring Spanish Culture",
+        "days": 10,
+        "price": 1500
+    },
+    {
+        "img": "https://i.ibb.co/Khf5xy5/tour-12-820x520.jpg",
+        "location": "Cairo, Egypt",
+        "title": "Journey through Ancient Egypt",
+        "days": 9,
+        "price": 1900
+    },
+    {
+        "img": "https://i.ibb.co/KVKt0Q0/tour-13-820x520.jpg",
+        "location": "Rio de Janeiro, Brazil",
+        "title": "Beachside Bliss in Rio",
+        "days": 1,
+        "price": 2200
+    },
+    {
+        "img": "https://i.ibb.co/X2mwxRc/tour-15-820x520.jpg",
+        "location": "Amsterdam, Netherlands",
+        "title": "Canal Cruising in Amsterdam",
+        "days": 11,
+        "price": 1400
+    }
+]

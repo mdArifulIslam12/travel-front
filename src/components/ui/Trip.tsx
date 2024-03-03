@@ -24,7 +24,7 @@ const Trip = () => {
                             <img  className="w-44 h-64 opacity-0 hover:opacity-100 bg-slate-300 hover:text-white transition" src={one.background} alt="" />
                             <div className="absolute bottom-1 left-14">
                                 <img className="w-14 mb-14 " src={one.icon} alt="" />
-                                <div className=" text-black text-center">
+                                <div className=" text- text-center">
                                     <p className="text-xl mb-1 font-semibold">{one.title}</p>
                                     <p className="mb-5">{one.tour}</p>
                                     <p className="text-orange-400 font-bold">{one.price}</p>

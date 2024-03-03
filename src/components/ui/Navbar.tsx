@@ -1,15 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
-import Select from "./Select";
-import Select2 from "./Select2";
-import Calender from "./Calender";
-import Guest from "./Guest";
-import Search from "./Search";
-import Card from "./Card";
-import Expereience from "./Expereience";
-import Destination from "./Destination";
 
 const Navbar = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
