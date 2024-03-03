@@ -1,11 +1,11 @@
 import SheardButtonIcons from "@/components/Sheard/SheardButtonIcons";
+import SheardHeader from "@/components/Sheard/SheardHeader";
 
 const AboutUs = () => {
   return (
-    <div className="mt-48 mb-48 ml-48">
-      <SheardButtonIcons className="w-24 h-24 relative">
-        dsfdsf
-      </SheardButtonIcons>
+    <div className="">
+      <SheardHeader title={"About Us"} subTitle="about us" />
+      <SheardButtonIcons className="w-24 h-24 relative">dsfd</SheardButtonIcons>
     </div>
   );
 };

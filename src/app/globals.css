@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -26,6 +27,27 @@
 }
 
 /* transform: scale(1.05); */
+
+.navbar-section {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  width: 100%;
+  border-bottom: 1px solid #ffffff33;
+}
+
+.navbar-section:hover {
+  background-color: #fff;
+  color: #000;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.background-color {
+  background-color: white;
+  color: #000;
+}
 
 .sheardButtonIcons {
   background-color: none;
@@ -55,23 +77,31 @@
   }
 }
 
-.navbar-section {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  color: #fff;
-  font-size: 16px;
-  font-family: "Jost", sans-serif;
+.sheardHeader {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/breadcrumb.jpg);
+  background-position: top center;
+  background-size: cover;
   width: 100%;
-  border-bottom: 1px solid #ffffff33;
+  height: 380px;
 }
-
-.navbar-section:hover {
-  background-color: #fff;
-  color: #000;
-  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+.sharderHeaderBackground {
+  background-color: #00000052;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
 }
-.background-color {
-  background-color: white;
-  color: #000;
+.sharderHeaderBackground h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  font-size: 64px;
+  text-transform: capitalize;
+  line-height: 1em;
+  z-index: 2;
+}
+.sharderHeaderBackground p {
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
 }

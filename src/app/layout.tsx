@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "../components/Sheard/sheard.module.css";
 import Providers from "@/lib/Providers";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
