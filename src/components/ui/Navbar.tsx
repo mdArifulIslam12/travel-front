@@ -6,14 +6,23 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Navbar = () => {
   const [backgroundColor, setBackgroundColor] = useState(false);
 
-  // const allScroolId = () => {
-  //   if (window.scrollY >= 8) {
-  //     setBackgroundColor(true);
-  //   } else {
-  //     setBackgroundColor(false);
-  //   }
-  // };
-  // window?.addEventListener("scroll", allScroolId);
+  useEffect(() => {
+    const allScroolId = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY >= 8) {
+          setBackgroundColor(true);
+        } else {
+          setBackgroundColor(false);
+        }
+      }
+    };
+
+    window?.addEventListener("scroll", allScroolId);
+
+    return () => {
+      window?.removeEventListener("scroll", allScroolId);
+    };
+  }, []);
 
   return (
     <div
