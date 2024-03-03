@@ -1,11 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.subHeaderTitle {
+  font-family: "Jost", sans-serif;
+}
+
+.headerTitle {
+  font-family: "Open Sans", sans-serif;
 }
 
 .foot {
@@ -15,11 +25,8 @@
   align-items: end;
 }
 
-/* .sheardButtonIcons {
-  width: 50px;
-  height: 50px;
-  position: relative;
-} */
+/* transform: scale(1.05); */
+
 .sheardButtonIcons {
   background-color: none;
 }
@@ -46,4 +53,25 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.navbar-section {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  width: 100%;
+  border-bottom: 1px solid #ffffff33;
+}
+
+.navbar-section:hover {
+  background-color: #fff;
+  color: #000;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.background-color {
+  background-color: white;
+  color: #000;
 }

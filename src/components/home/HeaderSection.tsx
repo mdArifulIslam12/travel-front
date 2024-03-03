@@ -38,7 +38,7 @@ const HeaderSection = () => {
 
   return (
     <>
-      <div>
+      <div className="w-100 header-section-home">
         <div
           className="w-full h-72 sm:h-96 md:h-[540px] lg:h-[640px] xl:h-[780px] flex flex-col items-center justify-center gap-5 lg:gap-10 bg-cover bg-center before:absolute before:bg-black/50 before:inset-0 transform duration-1000 ease-linear"
           style={{ backgroundImage: `url(${sliders[currentSlider].img})` }}
