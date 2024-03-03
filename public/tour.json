@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "icon": "https://i.ibb.co/MZ2Dkgb/adventure-game.png",
+        "background": "https://i.ibb.co/vPVmvTP/h1-book1.jpg",
+        "title": "Adventure",
+        "tour": "9+ Tour",
+        "price": "$50"
+    },
+    {
+        "id": 2,
+        "icon": "https://i.ibb.co/YcnyGNh/sunbed.png",
+        "background": "https://i.ibb.co/QKB8zQF/h1-book2.jpg",
+        "title": "Beaches",
+        "tour": "7+ Tour",
+        "price": "$80"
+    },
+    {
+        "id": 3,
+        "icon": "https://i.ibb.co/VYrNBRC/boat.png",
+        "background": "https://i.ibb.co/Vx0qDvp/h7-book-boat.jpg",
+        "title": "Boat Tour",
+        "tour": "3+ Tour",
+        "price": "$100"
+    },
+    {
+        "id": 4,
+        "icon": "https://i.ibb.co/VHtg6vS/city.png",
+        "background": "https://i.ibb.co/6y3qC2Z/h1-book3.jpg",
+        "title": "City Tour",
+        "tour": "0+ Tour",
+        "price": "$70"
+    },
+    {
+        "id": 5,
+        "icon": "https://i.ibb.co/PY83Zy2/fast-food.png",
+        "background": "https://i.ibb.co/3y05tXC/h7-food.jpg",
+        "title": "Food",
+        "tour": "5+ Tour",
+        "price": "$120"
+    },
+    {
+        "id": 6,
+        "icon": "https://i.ibb.co/Rg87pXY/hiking.png",
+        "background": "https://i.ibb.co/nDJw0n6/h1-book4.jpg",
+        "title": "Hiking",
+        "tour": "20+ Tour",
+        "price": "$90"
+    }
+]
