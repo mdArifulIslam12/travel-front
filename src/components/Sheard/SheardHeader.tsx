@@ -11,8 +11,10 @@ const SheardHeader = ({ title, subTitle }: ISheardHeared) => {
       <div className="sharderHeaderBackground">
         <div className="flex justify-center items-center h-[100%] ">
           <div>
-            <h4 className="text-2xl">{title}</h4>
-            <p>Home / {subTitle}</p>
+            <h4 className="text-2xl  ">{title}</h4>
+            <p className="font-bold uppercase subHeaderTitle text-md">
+              Home / {subTitle}
+            </p>
           </div>
         </div>
       </div>

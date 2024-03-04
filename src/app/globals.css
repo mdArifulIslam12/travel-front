@@ -5,10 +5,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+h2 {
+  font-family: "Abril Fatface", serif;
+}
+p {
+  font-family: "Jost", sans-serif;
 }
 
 .subHeaderTitle {
@@ -16,7 +24,8 @@
 }
 
 .headerTitle {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Abril Fatface", serif;
 }
 
 .foot {
@@ -92,7 +101,7 @@
   text-align: center;
 }
 .sharderHeaderBackground h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Abril Fatface", serif;
   font-weight: 700;
   text-align: center;
   color: #fff;
@@ -104,4 +113,32 @@
 .sharderHeaderBackground p {
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
+}
+
+.contact-about-link:hover .about-contact-icon {
+  color: #fff;
+}
+
+.avatar-section-img {
+  position: relative;
+}
+.avatar-section-img::before {
+  position: absolute;
+  background-color: #0000005a;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .about-page-time {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .support-button-sm {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
