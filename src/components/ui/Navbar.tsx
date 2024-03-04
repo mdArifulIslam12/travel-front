@@ -10,6 +10,7 @@ import Search from "./Search";
 import Card from "./Card";
 import Expereience from "./Expereience";
 import Destination from "./Destination";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -37,48 +38,25 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              <li><Link href="/">HOME</Link></li>
+              <li><Link href="/tour">TOURS</Link></li>
+              <li><Link href="/destination">DESTINATION</Link></li>
+              <li><Link href="/blog">BLOG</Link></li>
+              <li><Link href="/pages">PAGES</Link></li>
+              <li><Link href="/contract">CONTRACT</Link></li>
+             
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+          <ul className="menu menu-horizontal px-1 fw-fw-bold text-md">
+          <li><Link href="/">HOME</Link></li>
+              <li><Link href="/tour">TOURS</Link></li>
+              <li><Link href="/destination">DESTINATION</Link></li>
+              <li><Link href="/blog">BLOG</Link></li>
+              <li><Link href="/pages">PAGES</Link></li>
+              <li><Link href="/contract">CONTRACT</Link></li>
           </ul>
         </div>
         <div className="navbar-end">
