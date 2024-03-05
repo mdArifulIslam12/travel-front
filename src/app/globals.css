@@ -167,6 +167,18 @@ p {
   background-repeat: no-repeat;
   background-size: initial;
 }
+.about-travel-right-img {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/ab_img4.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 25% auto;
+}
+.about-travel-left-img {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/ab_img3.png);
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 25% auto;
+}
 
 @media (max-width: 768px) {
   .about-page-time {
@@ -176,5 +188,14 @@ p {
   .support-button-sm {
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+  .about-travel-right-img {
+    background-image: none;
+  }
+  .about-travel-left-img {
+    background-image: none;
+  }
+  .about-custom-tarvel {
+    display: none;
   }
 }
