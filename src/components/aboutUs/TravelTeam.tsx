@@ -44,7 +44,7 @@ const TravelTeam = () => {
         {allTeam.map((team) => (
           <div
             key={team.id}
-            className="card max-w-lg bg-base-100 tema-project-img-card "
+            className="card lg:max-w-lg bg-base-100 tema-project-img-card "
           >
             <figure className="relative rounded-sm ">
               <img src={team.img} alt="Tema img" className="rounded-sm " />
