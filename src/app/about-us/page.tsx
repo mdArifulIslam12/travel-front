@@ -1,6 +1,7 @@
 import SheardButtonIcons from "@/components/Sheard/SheardButtonIcons";
 import SheardHeader from "@/components/Sheard/SheardHeader";
 import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
+import TravelTeam from "@/components/aboutUs/TravelTeam";
 import AboutSubHeader from "@/components/aboutUs/aboutSubHeader";
 
 const AboutUs = () => {
@@ -11,6 +12,9 @@ const AboutUs = () => {
         <AboutSubHeader />
       </div>
       <SheardButtonIcons className="w-24 h-24 relative">dsfd</SheardButtonIcons>
+
+      <TravelTeam />
+
       <SheardNewsletterSupport />
     </div>
   );

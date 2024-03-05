@@ -10,6 +10,7 @@ import Select2 from "@/components/ui/Select2";
 import Destination from "@/components/ui/Destination";
 import HeaderSection from "@/components/home/HeaderSection";
 import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
+import Travel from "@/components/ui/Travel";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Expereience></Expereience>
       <Choose></Choose>
       <Trip></Trip>
+      <Travel></Travel>
       <SheardNewsletterSupport />
     </div>
   );

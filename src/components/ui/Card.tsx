@@ -86,13 +86,13 @@ const Card = () => {
         </div>
         <div className="flex justify-center mt-4">
           <button
-            className=" text-white font-bold py-2 px-4 rounded"
+            className="  font-bold py-2 px-4 rounded"
             onClick={prevSlide}
           >
             <FaChevronLeft />
           </button>
           <button
-            className=" text-white font-bold py-2 px-4 rounded"
+            className="  font-bold py-2 px-4 rounded"
             onClick={nextSlide}
           >
             <FaChevronRight />

@@ -132,6 +132,21 @@ p {
   left: 0;
 }
 
+.team-project-icons {
+  display: none;
+}
+
+.tema-project-img-card:hover .team-project-icons {
+  display: block;
+  transition: 1s ease-in;
+}
+.team-project-single-icon {
+  color: #969ba2;
+}
+.team-project-single-icon:hover {
+  color: #e46d30;
+}
+
 @media (max-width: 768px) {
   .about-page-time {
     padding-left: 10px;
