@@ -147,6 +147,20 @@ p {
   color: #e46d30;
 }
 
+.woldExcitin-backgournd-img {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/ab_bg2.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+.woldExcitin-backgournd {
+  width: 100%;
+  height: 100%;
+  background-color: #0000006c;
+}
+
 @media (max-width: 768px) {
   .about-page-time {
     padding-left: 10px;
