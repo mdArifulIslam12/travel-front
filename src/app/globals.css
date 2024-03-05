@@ -160,6 +160,13 @@ p {
   height: 100%;
   background-color: #0000006c;
 }
+.about-easy-booking-deatils-img {
+  background-color: #f6f8fb;
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/ab_deco1.png);
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: initial;
+}
 
 @media (max-width: 768px) {
   .about-page-time {
