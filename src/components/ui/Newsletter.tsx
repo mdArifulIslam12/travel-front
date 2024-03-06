@@ -15,23 +15,28 @@ const Newsletter = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
+
     setDataSubmit(true);
-    emailjs
-      .sendForm(
-        "service_0gb8yw7",
-        "template_j1mckmk",
-        event.target,
-        "GGJcUSYKscponjqL2"
-      )
-      .then(
-        (result: any) => {
-          setMessage("Send your email message Successfully");
-          event.target.reset();
-        },
-        (error: any) => {
-          setMessageError(`Send message failed ${error} !!`);
-        }
-      );
+    if (inputValue) {
+      emailjs
+        .sendForm(
+          "service_0gb8yw7",
+          "template_j1mckmk",
+          event.target,
+          "GGJcUSYKscponjqL2"
+        )
+        .then(
+          (result: any) => {
+            setMessage("Send your email message Successfully");
+            event.target.reset();
+          },
+          (error: any) => {
+            setMessageError(`Send message failed ${error} !!`);
+          }
+        );
+    } else {
+      setMessageError("Input not value");
+    }
     setDataSubmit(false);
     event.target.reset();
   };

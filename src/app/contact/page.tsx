@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div>
       <SheardHeader title="Contact" subTitle="contact" />
-      <div className=" max-w-7xl mx-auto my-16">
+      <div className=" max-w-7xl mx-auto my-16 contact-home-page">
         <h2 className="text-4xl font-bold text-black">
           Need to contact us? Use one of the options below.
         </h2>

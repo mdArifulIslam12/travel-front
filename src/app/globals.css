@@ -192,7 +192,7 @@ p {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-350px * 14));
   }
 }
 
@@ -201,24 +201,23 @@ p {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-350px * 14));
   }
 }
 .slider {
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  width: 100%;
+  background: white;
   height: 500px;
   margin: auto;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 .slider::before,
 .slider::after {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
-  height: 100px;
+  height: 500px;
   position: absolute;
-  width: 200px;
+  width: 350px;
   z-index: 2;
 }
 .slider::after {
@@ -231,15 +230,18 @@ p {
   top: 0;
 }
 .slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 150s linear infinite running;
+  animation: scroll 150s linear infinite running;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(350px * 28);
 }
-/* .slider .slide {
+.slider .slide {
   height: 500px;
-  width: 250px;
-} */
+  width: 350px;
+}
+.slide img {
+  border-radius: 8px;
+}
 
 /* Contact Page Auto paly Img End */
 
@@ -260,5 +262,9 @@ p {
   }
   .about-custom-tarvel {
     display: none;
+  }
+  .contact-home-page {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
