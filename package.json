@@ -11,11 +11,13 @@
   "dependencies": {
     "@emailjs/browser": "^4.2.0",
     "@reduxjs/toolkit": "^2.2.1",
+    "@types/google-map-react": "^2.1.10",
     "@types/slick-carousel": "^1.6.40",
     "axios": "^1.6.7",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.0.8",
+    "google-map-react": "^2.2.1",
     "jwt-decode": "^4.0.0",
     "next": "14.1.0",
     "react": "^18",

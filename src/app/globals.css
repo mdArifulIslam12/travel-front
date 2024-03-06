@@ -180,6 +180,69 @@ p {
   background-size: 25% auto;
 }
 
+/* Contact Page Auto paly Img strat */
+
+.about-page-auto-paly-img {
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  width: 100%;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+/* .slider .slide {
+  height: 500px;
+  width: 250px;
+} */
+
+/* Contact Page Auto paly Img End */
+
 @media (max-width: 768px) {
   .about-page-time {
     padding-left: 10px;
