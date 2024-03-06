@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const Navbar = () => {
   const [backgroundColor, setBackgroundColor] = useState(false);
@@ -59,46 +59,46 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a>Item 1</a>
+                  <Link href="/">HOME</Link>
                 </li>
                 <li>
-                  <a>Parent</a>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
+                  <Link href="/tour">TOURS</Link>
                 </li>
                 <li>
-                  <a>Item 3</a>
+                  <Link href="/destination">DESTINATION</Link>
+                </li>
+                <li>
+                  <Link href="/blog">BLOG</Link>
+                </li>
+                <li>
+                  <Link href="/about-us">About Us</Link>
+                </li>
+                <li>
+                  <Link href="/contact">CONTRACT</Link>
                 </li>
               </ul>
             </div>
             <a className="btn btn-ghost text-xl">daisyUI</a>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
+            <ul className="menu menu-horizontal px-1 fw-fw-bold text-md">
               <li>
-                <a>Item 1</a>
+                <Link href="/">HOME</Link>
               </li>
               <li>
-                <details>
-                  <summary>Parent</summary>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </details>
+                <Link href="/tour">TOURS</Link>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link href="/destination">DESTINATION</Link>
+              </li>
+              <li>
+                <Link href="/blog">BLOG</Link>
+              </li>
+              <li>
+                <Link href="/about-us">About Us</Link>
+              </li>
+              <li>
+                <Link href="/contact">CONTACT</Link>
               </li>
             </ul>
           </div>
