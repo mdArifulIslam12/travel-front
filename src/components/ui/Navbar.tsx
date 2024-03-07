@@ -2,6 +2,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import logo from "@/assets/footer-logo.svg"
+import Image from "next/image";
+import { FaPhoneVolume } from "react-icons/fa6";
+import { FaSearch,FaRegUser } from "react-icons/fa";
 
 const Navbar = () => {
   const [backgroundColor, setBackgroundColor] = useState(false);
@@ -26,11 +30,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${
-        backgroundColor ? "navbar-section  background-color " : "navbar-section"
-      }`}
+      className={`${backgroundColor ? "navbar-section  background-color " : "navbar-section"
+        }`}
     >
-      <div className="navbar-bg-section max-w-7xl mx-auto">
+      <div className="navbar-bg-section max-w-7xl mx-auto bg-white text-black">
         <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
@@ -78,7 +81,12 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <Image
+              src={logo}
+              width={100}
+              height={100}
+              alt="Picture of the author"
+            />
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 fw-fw-bold text-md">
@@ -103,7 +111,14 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="btn">Button</a>
+            <div className="flex gap-3 mx-3">
+              <FaPhoneVolume className="text-xl mt-2"/>
+              <p className="text-lg text-orange-400">+(40) 800 0246 888</p>
+            </div>
+            <div className="">
+              <FaSearch className="text-2xl my-1"></FaSearch>
+              <FaRegUser className="text-2xl my-1"></FaRegUser>
+            </div>
           </div>
         </div>
       </div>
