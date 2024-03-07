@@ -1,4 +1,3 @@
-
 import Choose from "@/components/ui/Choose";
 import Trip from "@/components/ui/Trip";
 import Calender from "@/components/ui/Calender";
@@ -9,11 +8,15 @@ import Search from "@/components/ui/Search";
 import Select from "@/components/ui/Select";
 import Select2 from "@/components/ui/Select2";
 import Destination from "@/components/ui/Destination";
+import HeaderSection from "@/components/home/HeaderSection";
+import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
+import Travel from "@/components/ui/Travel";
 
 export default function Home() {
-  return(
-    <div className="">
-      <div className="flex justify-center banner">
+  return (
+    <div className="sdf">
+      <HeaderSection />
+      <div className="flex justify-center">
         <Select></Select>
         <Select2></Select2>
         <Calender></Calender>
@@ -25,6 +28,8 @@ export default function Home() {
       <Expereience></Expereience>
       <Choose></Choose>
       <Trip></Trip>
+      <Travel></Travel>
+      <SheardNewsletterSupport />
     </div>
   );
 }

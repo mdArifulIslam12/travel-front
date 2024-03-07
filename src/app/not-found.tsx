@@ -1,7 +1,13 @@
+import SheardHeader from "@/components/Sheard/SheardHeader";
+import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
+import NotFoundPage from "@/components/ui/NotFound";
+
 const NotFound = () => {
   return (
     <div>
-      <h2>Not Found</h2>
+      <SheardHeader title="Not Found" subTitle="not found" />
+      <NotFoundPage />
+      <SheardNewsletterSupport />
     </div>
   );
 };
