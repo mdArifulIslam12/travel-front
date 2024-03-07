@@ -13,7 +13,7 @@ import Destination from "@/components/ui/Destination";
 export default function Home() {
   return(
     <div className="">
-      <div className="flex justify-center">
+      <div className="flex justify-center banner">
         <Select></Select>
         <Select2></Select2>
         <Calender></Calender>
