@@ -28,10 +28,8 @@ const AllTours = () => {
   const tours = allTour?.tours;
   const meta = allTour?.meta;
   console.log(meta);
-  if (meta) {
-    console.log(meta?.total / 8);
-  }
-
+  console.log(Math.ceil(meta?.total / 8));
+  let totalPage = Math.ceil(meta?.total / 8);
   let tourLength = 0;
   if (tours) {
     tourLength = tours.length;
@@ -50,22 +48,28 @@ const AllTours = () => {
     setSize(pageSize);
   };
 
+  const pages = Array.from({ length: totalPage }, (_, index) => index + 1);
+
   return (
     <div>
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-5">{content}</div>
-      <div className="flex justify-center mt-8">
-        <button
-          onClick={() => onPaginationChange(1, 8)}
-          className="mr-2 px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => onPaginationChange(1, 8)}
-          className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
-        >
-          Next
-        </button>
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-5 gap-y-7 ">
+        {content}
+      </div>
+
+      <div className="flex justify-center items-center space-x-4 mt-8">
+        <button onClick={() => onPaginationChange(page - 1, 8)}>prev</button>
+        {pages.map((allPage) => (
+          <button
+            key={allPage}
+            className={`px-4 py-2 rounded-md bg-gray-200 ${
+              page === allPage ? "bg-gray-500 text-white" : "hover:bg-gray-300"
+            }`}
+            onClick={() => onPaginationChange(allPage, 8)}
+          >
+            {allPage}
+          </button>
+        ))}
+        <button onClick={() => onPaginationChange(page + 1, 8)}>next</button>
       </div>
     </div>
   );
