@@ -20,11 +20,10 @@ const tourApi = baseApi.injectEndpoints({
         url: `/tour?limit=${arg.limit}&page=${arg.page}&sortBy=${arg.sortBy}&sortOrder=${arg.sortOrder}`,
         method: "GET",
       }),
-      transformResponse: (response: ITour[], meta: IMeta) => {
-        console.log(meta);
+      transformResponse: (response: ITour[], meta: any) => {
         return {
           tours: response,
-          meta: meta,
+          meta,
         };
       },
       providesTags: ["tours"],

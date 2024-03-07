@@ -27,7 +27,7 @@ const AllTours = () => {
 
   const tours = allTour?.tours;
   const meta = allTour?.meta;
-  console.log(allTour);
+  console.log(meta);
   if (meta) {
     console.log(meta?.total / 8);
   }
