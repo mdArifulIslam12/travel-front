@@ -2,10 +2,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import logo from "@/assets/footer-logo.svg"
+import logo from "@/assets/footer-logo.svg";
 import Image from "next/image";
 import { FaPhoneVolume } from "react-icons/fa6";
-import { FaSearch,FaRegUser } from "react-icons/fa";
+import { FaSearch, FaRegUser } from "react-icons/fa";
 
 const Navbar = () => {
   const [backgroundColor, setBackgroundColor] = useState(false);
@@ -30,10 +30,11 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${backgroundColor ? "navbar-section  background-color " : "navbar-section"
-        }`}
+      className={`${
+        backgroundColor ? "navbar-section  background-color " : "navbar-section"
+      }`}
     >
-      <div className="navbar-bg-section max-w-7xl mx-auto bg-white text-black">
+      <div className="navbar-bg-section max-w-7xl mx-auto text-black">
         <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
@@ -112,7 +113,7 @@ const Navbar = () => {
           </div>
           <div className="navbar-end">
             <div className="flex gap-3 mx-3">
-              <FaPhoneVolume className="text-xl mt-2"/>
+              <FaPhoneVolume className="text-xl mt-2" />
               <p className="text-lg text-orange-400">+(40) 800 0246 888</p>
             </div>
             <div className="">
