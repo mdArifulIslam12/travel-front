@@ -1,6 +1,7 @@
 import SheardHeader from "@/components/Sheard/SheardHeader";
 import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
 import AllTours from "@/components/Tours/AllTours";
+import TourFiltlerSection from "@/components/Tours/TourFiltlerSection";
 import React from "react";
 
 const TourPage = () => {
@@ -13,7 +14,7 @@ const TourPage = () => {
             <AllTours />
           </div>
           <div className="lg:col-span-4 sm:col-span-12 lg:pl-12 ">
-            <p>sdfdsf</p>
+            <TourFiltlerSection />
           </div>
         </div>
       </div>

@@ -2,10 +2,14 @@
 import { useGetAllTourQuery } from "@/redux/api/tour/tourApi";
 import React, { useState } from "react";
 import Tour from "./tour";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useAppSelector } from "@/redux/hooks";
 
 const AllTours = () => {
   const query: Record<string, any> = {};
-
+  const { type, search, sort, priceSortHigh, priceSortLow } = useAppSelector(
+    (state) => state.filter
+  );
   const [page, setPage] = useState<number>(1);
   const [size, setSize] = useState<number>(8);
   const [sortBy, setSortBy] = useState<string>("");
@@ -27,8 +31,6 @@ const AllTours = () => {
 
   const tours = allTour?.tours;
   const meta = allTour?.meta;
-  console.log(meta);
-  console.log(Math.ceil(meta?.total / 8));
   let totalPage = Math.ceil(meta?.total / 8);
   let tourLength = 0;
   if (tours) {
@@ -40,10 +42,14 @@ const AllTours = () => {
   } else if (!isLoading && !isError && tours?.length == 0) {
     content = <div className="">Tour tag not found!!</div>;
   } else if (!isLoading && !isError && tourLength > 0 && isSuccess) {
-    content = tours?.map((tour, index) => <Tour tour={tour} key={index} />);
+    const filteredData = tours?.filter(
+      (item) => item.price >= priceSortLow && item.price <= priceSortHigh
+    );
+    content = filteredData?.map((tour, index) => (
+      <Tour tour={tour} key={index} />
+    ));
   }
   const onPaginationChange = (page: number, pageSize: number) => {
-    console.log("Page:", page, "PageSize:", pageSize);
     setPage(page);
     setSize(pageSize);
   };
@@ -56,20 +62,42 @@ const AllTours = () => {
         {content}
       </div>
 
-      <div className="flex justify-center items-center space-x-4 mt-8">
-        <button onClick={() => onPaginationChange(page - 1, 8)}>prev</button>
+      <div className="flex items-center space-x-4 mt-16">
+        {page !== 1 && (
+          <button
+            onClick={() => onPaginationChange(page - 1, 8)}
+            className="text-[#969BA1] uppercase text-[16px] font-medium"
+          >
+            <div className="flex items-center">
+              <IoIosArrowBack className="text-[19px] font-medium" />
+              <span>prev</span>
+            </div>
+          </button>
+        )}
         {pages.map((allPage) => (
           <button
             key={allPage}
-            className={`px-4 py-2 rounded-md bg-gray-200 ${
-              page === allPage ? "bg-gray-500 text-white" : "hover:bg-gray-300"
+            className={`px-4 py-2 rounded-full text-[#969BA1]  ${
+              page === allPage
+                ? "bg-[#e46d30] text-white"
+                : "hover:bg-[#e46d30] hover:text-white "
             }`}
             onClick={() => onPaginationChange(allPage, 8)}
           >
             {allPage}
           </button>
         ))}
-        <button onClick={() => onPaginationChange(page + 1, 8)}>next</button>
+        {page !== 3 && (
+          <button
+            onClick={() => onPaginationChange(page + 1, 8)}
+            className="text-[#969BA1] uppercase text-[16px] font-medium"
+          >
+            <div className="flex items-center">
+              <span>next</span>
+              <IoIosArrowForward className="text-[19px] font-medium" />
+            </div>
+          </button>
+        )}
       </div>
     </div>
   );

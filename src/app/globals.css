@@ -245,6 +245,46 @@ p {
 
 /* Contact Page Auto paly Img End */
 
+/* tour */
+
+.single-tour-card {
+  overflow: hidden;
+}
+.single-tour-card:hover .img-tour {
+  transform: scale(1.5);
+  transition: 3s ease-in-out;
+}
+
+/* Rating Css  */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+}
+
+.star {
+  color: #ecbe1d;
+  font-size: 1em;
+}
+
+.filled {
+  color: #ecbe1d; /* Color for filled stars */
+}
+
+.half-filled {
+  color: #b8a971; /* Color for half-filled star */
+}
+
+.empty {
+  color: wheat; /* Color for empty stars */
+}
+
+.rating-value {
+  margin-left: 0.5em;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .about-page-time {
     padding-left: 10px;
