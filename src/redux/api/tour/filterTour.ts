@@ -6,6 +6,7 @@ const initialState = {
   sort: "",
   priceSortHigh: 211,
   priceSortLow: 0,
+  reviewStar: 0,
 };
 
 const filterSlice = createSlice({
@@ -13,7 +14,12 @@ const filterSlice = createSlice({
   initialState,
   reducers: {
     addType: (state, action) => {
-      state.type.push(action.payload);
+      //   state.type.push(action.payload);
+      state.type = action.payload;
+    },
+    addReviewStar: (state, action) => {
+      //   state.type.push(action.payload);
+      state.reviewStar = action.payload;
     },
     addSort: (state, action) => {
       state.sort = action.payload;
@@ -37,4 +43,5 @@ export const {
   addSort,
   addPriceSortHigh,
   addPriceSortLow,
+  addReviewStar,
 } = filterSlice.actions;

@@ -1,7 +1,11 @@
 "use client";
-import { addPriceSortHigh } from "@/redux/api/tour/filterTour";
+import {
+  addPriceSortHigh,
+  addReviewStar,
+  addType,
+} from "@/redux/api/tour/filterTour";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const TourFiltlerSection = () => {
   const allCategories = [
@@ -28,14 +32,17 @@ const TourFiltlerSection = () => {
     },
   ];
 
-  const { type, search, sort, priceSortHigh, priceSortLow } = useAppSelector(
-    (state) => state.filter
-  );
+  const { type, search, sort, reviewStar, priceSortHigh, priceSortLow } =
+    useAppSelector((state) => state.filter);
   const dispatch = useAppDispatch();
 
   const [rangeValue, setRangeValue] = useState(priceSortHigh);
 
   const [selectedCategories, setSelectedCategories] = useState([]);
+
+  useEffect(() => {
+    dispatch(addType(selectedCategories));
+  }, [selectedCategories]);
 
   // Function to handle checkbox change event
   const handleCheckboxChange = (category: never) => {
@@ -49,7 +56,6 @@ const TourFiltlerSection = () => {
       setSelectedCategories(selectedCategories.filter((c) => c !== category));
     }
   };
-  console.log(selectedCategories);
 
   const handleRangeChange = (event: any) => {
     const value = parseInt(event.target.value);
@@ -78,16 +84,69 @@ const TourFiltlerSection = () => {
         <p className="text-xl font-medium text-black mt-4 mb-3">Categories</p>
 
         {allCategories.map((c) => (
-          <div className="flex items-center" key={c.categories}>
+          <div
+            className="flex items-center mt-2 hover:text-[#e46d30] "
+            key={c.categories}
+          >
             <input
               type="checkbox"
-              onChange={() => handleCheckboxChange(c.categories)}
-              checked={selectedCategories.includes(c.categories)}
-              className="checkbox checkbox-sm"
+              onChange={() => handleCheckboxChange(c.categories as never)}
+              checked={selectedCategories.includes(c.categories as never)}
+              className="checkbox checkbox-sm hover:border-orange-400   [--chkbg:theme(colors.orange.500)]"
             />
             <p className="ml-2">{c.categories}</p>
           </div>
         ))}
+      </div>
+      <div className="border-y-[2px] border-dotted  py-12 ">
+        <p className="text-xl font-medium text-black mt-4 mb-3">Reviews</p>
+        <div>
+          <div className="flex items-center mt-2 text-[#5C626A]  hover:text-[#e46d30] ">
+            <input
+              type="checkbox"
+              onChange={() => dispatch(addReviewStar(5))}
+              checked={reviewStar == 5}
+              className="checkbox checkbox-sm hover:border-orange-400  [--chkbg:theme(colors.orange.500)] "
+            />
+            <p className="ml-2">5 Stars </p>
+          </div>
+          <div className="flex items-center mt-2 text-[#5C626A]  hover:text-[#e46d30] ">
+            <input
+              type="checkbox"
+              onChange={() => dispatch(addReviewStar(4))}
+              checked={reviewStar == 4}
+              className="checkbox checkbox-sm hover:border-orange-400  [--chkbg:theme(colors.orange.500)] "
+            />
+            <p className="ml-2">4 Stars & Up</p>
+          </div>
+          <div className="flex items-center mt-2 text-[#5C626A]  hover:text-[#e46d30] ">
+            <input
+              type="checkbox"
+              onChange={() => dispatch(addReviewStar(3))}
+              checked={reviewStar == 3}
+              className="checkbox checkbox-sm hover:border-orange-400  [--chkbg:theme(colors.orange.500)] "
+            />
+            <p className="ml-2">3 Stars & Up</p>
+          </div>
+          <div className="flex items-center mt-2 text-[#5C626A]  hover:text-[#e46d30] ">
+            <input
+              type="checkbox"
+              onChange={() => dispatch(addReviewStar(2))}
+              checked={reviewStar == 2}
+              className="checkbox checkbox-sm hover:border-orange-400  [--chkbg:theme(colors.orange.500)] "
+            />
+            <p className="ml-2">2 Stars & Up</p>
+          </div>
+          <div className="flex items-center mt-2 text-[#5C626A]  hover:text-[#e46d30] ">
+            <input
+              type="checkbox"
+              onChange={() => dispatch(addReviewStar(1))}
+              checked={reviewStar == 1}
+              className="checkbox checkbox-sm hover:border-orange-400  [--chkbg:theme(colors.orange.500)] "
+            />
+            <p className="ml-2">1 Stars & Up</p>
+          </div>
+        </div>
       </div>
     </div>
   );

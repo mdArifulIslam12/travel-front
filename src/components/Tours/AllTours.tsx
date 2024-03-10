@@ -3,13 +3,15 @@ import { useGetAllTourQuery } from "@/redux/api/tour/tourApi";
 import React, { useState } from "react";
 import Tour from "./tour";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { FaSortAlphaDown } from "react-icons/fa";
+import { ITour } from "@/types";
+import { addSort } from "@/redux/api/tour/filterTour";
 
 const AllTours = () => {
   const query: Record<string, any> = {};
-  const { type, search, sort, priceSortHigh, priceSortLow } = useAppSelector(
-    (state) => state.filter
-  );
+  const { type, search, sort, reviewStar, priceSortHigh, priceSortLow } =
+    useAppSelector((state) => state.filter);
   const [page, setPage] = useState<number>(1);
   const [size, setSize] = useState<number>(8);
   const [sortBy, setSortBy] = useState<string>("");
@@ -28,6 +30,7 @@ const AllTours = () => {
   } = useGetAllTourQuery({
     ...query,
   });
+  const dispatch = useAppDispatch();
 
   const tours = allTour?.tours;
   const meta = allTour?.meta;
@@ -36,15 +39,43 @@ const AllTours = () => {
   if (tours) {
     tourLength = tours.length;
   }
+
+  // State to manage the selected option
+  const [selectedOption, setSelectedOption] = useState("");
+
+  // Event handler to update the selected option
+  const handleSelectChange = (e: any) => {
+    setSelectedOption(e.target.value);
+    dispatch(addSort(e.target.value));
+  };
+
   let content = null;
   if (isLoading) {
     content = <div>Loding..</div>;
   } else if (!isLoading && !isError && tours?.length == 0) {
     content = <div className="">Tour tag not found!!</div>;
   } else if (!isLoading && !isError && tourLength > 0 && isSuccess) {
-    const filteredData = tours?.filter(
-      (item) => item.price >= priceSortLow && item.price <= priceSortHigh
-    );
+    const filteredData = tours
+      ?.filter(
+        (item) => item.price >= priceSortLow && item.price <= priceSortHigh
+      )
+      .filter((tour: ITour) => {
+        if (type.length > 0) {
+          return type.includes(tour.categories as never);
+        } else {
+          return tour;
+        }
+      })
+      .filter((tour: ITour) => tour.rating >= reviewStar)
+      .slice()
+      .sort((a: ITour, b: ITour): any => {
+        if (sort == "price") {
+          return b.price - a.price;
+        } else if (sort == "rating") {
+          return b.rating - a.rating;
+        }
+      });
+
     content = filteredData?.map((tour, index) => (
       <Tour tour={tour} key={index} />
     ));
@@ -58,7 +89,26 @@ const AllTours = () => {
 
   return (
     <div>
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-5 gap-y-7 ">
+      <div className="flex items-center justify-between mb-8">
+        <div>
+          {" "}
+          <p className="text-[#969BA1] text-sm">{meta?.total} Tours</p>
+        </div>
+        <div className="flex items-center">
+          <p className="text-[#969BA1] text-sm">Sort By</p>
+          <FaSortAlphaDown className="mx-2" />
+          <select
+            className="select select-bordered select-sm w-[150px] max-w-xs"
+            value={selectedOption}
+            onChange={handleSelectChange}
+          >
+            <option value="">Title</option>
+            <option value="price">Price</option>
+            <option value="rating">Rating</option>
+          </select>
+        </div>
+      </div>
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 lg:gap-5 gap-y-7 ">
         {content}
       </div>
 

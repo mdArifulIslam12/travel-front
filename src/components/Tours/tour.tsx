@@ -9,7 +9,7 @@ const Tour = ({ tour }: any) => {
   const { title, image, price, rating, city, country, duration } = tour;
   // console.log(tour.continents);
   return (
-    <div className="card w-96 bg-base-100 shadow-xl single-tour-card ">
+    <div className="card lg:max-w-lg bg-base-100 shadow-xl single-tour-card ">
       <figure className="h-[280px]">
         <Link href={`tour/${tour?._id}`}>
           <img src={image} alt="tour img" className="img-tour h-[280px] " />

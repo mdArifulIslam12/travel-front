@@ -303,8 +303,13 @@ p {
   .about-custom-tarvel {
     display: none;
   }
-  .contact-home-page {
+
+  .contact-home-page,
+  .tour-page-small-device {
     padding-left: 12px;
     padding-right: 12px;
+  }
+  .tour-page-fliter-section {
+    display: none;
   }
 }
