@@ -284,6 +284,35 @@ p {
   font-size: 14px;
   font-weight: bold;
 }
+/* ratin end  */
+.tour-page-other-section {
+  overflow: hidden;
+  border-radius: 3px;
+}
+.tour-page-other-section-bg-img,
+.tour-page-other-section-bg-img-1 {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/FAQ_banner1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.tour-page-other-section-bg-img-1 {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/FAQ_banner2.jpg);
+}
+
+.tour-page-other-section:hover .tour-page-other-section-bg-img {
+  transform: scale(1.2);
+  transition: 2s ease-in-out;
+}
+.tour-page-other-section:hover .tour-page-other-section-bg-img-1 {
+  transform: scale(1.2);
+  transition: 2s ease-in-out;
+}
 
 @media (max-width: 768px) {
   .about-page-time {

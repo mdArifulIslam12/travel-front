@@ -1,6 +1,8 @@
 import SheardHeader from "@/components/Sheard/SheardHeader";
 import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
 import AllTours from "@/components/Tours/AllTours";
+import FqaSection from "@/components/Tours/FqaSection";
+import OtherStaticTour from "@/components/Tours/OtherStaticTour";
 import TourFiltlerSection from "@/components/Tours/TourFiltlerSection";
 import React from "react";
 
@@ -15,6 +17,14 @@ const TourPage = () => {
           </div>
           <div className="lg:col-span-4 sm:col-span-12 lg:pl-12  tour-page-fliter-section ">
             <TourFiltlerSection />
+          </div>
+        </div>
+        <div className=" grid lg:grid-cols-12 sm:grid-cols-12 gap-4 my-16  ">
+          <div className="lg:col-span-8 sm:col-span-12  lg:pr-4 ">
+            <FqaSection />
+          </div>
+          <div className="lg:col-span-4 sm:col-span-12 lg:pl-12  ">
+            <OtherStaticTour />
           </div>
         </div>
       </div>
