@@ -57,7 +57,12 @@ p {
   background-color: white;
   color: #000;
 }
-
+.background-color-nav-section {
+  color: #000;
+}
+.navbar-section:hover .nav-lg-section {
+  color: #000;
+}
 .sheardButtonIcons {
   background-color: none;
 }

@@ -34,9 +34,9 @@ const tourApi = baseApi.injectEndpoints({
         method: "GET",
       }),
 
-      providesTags: (result, error, arg) => [
+      providesTags: (result: any, error: any, arg: any) => [
         "tours",
-        { type: "tour", id: arg },
+        { type: "tour", id: arg.id },
       ],
     }),
     addTour: builder.mutation({
