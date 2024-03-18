@@ -1,6 +1,7 @@
 "use client";
 
 import { useGetAllTourQuery } from "@/redux/api/tour/tourApi";
+import { ITour } from "@/types";
 import { useEffect, useState } from "react";
 import { BsCupHot } from "react-icons/bs";
 import { GiPaperBoat } from "react-icons/gi";
@@ -44,41 +45,46 @@ const Trip = () => {
     tourLength = tours.length;
   }
 
-  let content = null;
+  let content: any;
   if (isLoading) {
     content = <div>Loding..</div>;
   } else if (!isLoading && !isError && tours?.length == 0) {
     content = <div className="">Tour tag not found!!</div>;
   } else if (!isLoading && !isError && tourLength > 0 && isSuccess) {
-    const adventureData = tours?.filter(
-      (tour) => tour.categories == "Adventure"
-    ).length;
-    const beachesData = tours?.filter(
-      (tour) => tour.categories == "Beaches"
-    ).length;
-    const boatData = tours?.filter(
-      (tour) => tour.categories == "Boat Tours"
-    ).length;
-    const cityData = tours?.filter(
-      (tour) => tour.categories == "city Tours"
-    ).length;
-    const hikingData = tours?.filter(
-      (tour) => tour.categories == "Hiking"
-    ).length;
-    const foodData = tours?.filter((tour) => tour.categories == "Food").length;
-
-    setAdventure(adventureData || 0);
-    setBeach(beachesData || 0);
-    setBoat(boatData || 0);
-    setFood(foodData || 0);
-    setcity(cityData || 0);
-    setHinking(hikingData || 0);
-
     content = tours;
   }
+  useEffect(() => {
+    if (content && Array.isArray(content)) {
+      const adventureData = content?.filter(
+        (tour: ITour) => tour.categories == "Adventure"
+      );
+      const beachesData = content?.filter(
+        (tour: ITour) => tour.categories == "Beaches"
+      );
+      const boatData = content?.filter(
+        (tour: ITour) => tour.categories == "Boat Tours"
+      );
+      const cityData = content?.filter(
+        (tour: ITour) => tour.categories == "city Tours"
+      );
+      const hikingData = content?.filter(
+        (tour: ITour) => tour.categories == "Hiking"
+      );
+      const foodData = content?.filter(
+        (tour: ITour) => tour.categories == "Food"
+      );
+
+      setAdventure(adventureData?.length || 0);
+      setBeach(beachesData?.length || 0);
+      setBoat(boatData?.length || 0);
+      setFood(foodData?.length || 0);
+      setcity(cityData?.length || 0);
+      setHinking(hikingData?.length || 0);
+    }
+  }, [content]);
 
   return (
-    <div className="bg-[hsl(217,61%,90%)]">
+    <div className="bg-[#eef2f9] py-20 ">
       <div className=" max-w-7xl mx-auto py-12 ">
         <div>
           <p className="text-center uppercase text-md">Browse by Category</p>

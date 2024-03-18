@@ -14,6 +14,7 @@ import HeaderSection from "@/components/home/HeaderSection";
 import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
 import Travel from "@/components/ui/Travel";
 import HomeHeaderSection from "@/components/home/HomeHeaderSection";
+import ChooseSection from "@/components/home/choose";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       {/* <Destination></Destination> */}
       {/* <Expereience></Expereience> */}
       <Choose></Choose>
+      <ChooseSection />
       <Trip></Trip>
       <Travel></Travel>
       <SheardNewsletterSupport />
