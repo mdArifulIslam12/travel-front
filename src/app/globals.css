@@ -1,11 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap");
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+h2 {
+  font-family: "Abril Fatface", serif;
+}
+p {
+  font-family: "Jost", sans-serif;
+}
+
+.subHeaderTitle {
+  font-family: "Jost", sans-serif;
+}
+.home-header-details {
+  font-family: "Herr Von Muellerhoff", cursive;
+}
+
+.headerTitle {
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Abril Fatface", serif;
 }
 
 .foot {
@@ -15,11 +39,34 @@
   align-items: end;
 }
 
-/* .sheardButtonIcons {
-  width: 50px;
-  height: 50px;
-  position: relative;
-} */
+/* transform: scale(1.05); */
+
+.navbar-section {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  width: 100%;
+  border-bottom: 1px solid #ffffff33;
+}
+
+.navbar-section:hover {
+  background-color: #fff;
+  color: #000;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.background-color {
+  background-color: white;
+  color: #000;
+}
+.background-color-nav-section {
+  color: #000;
+}
+.navbar-section:hover .nav-lg-section {
+  color: #000;
+}
 .sheardButtonIcons {
   background-color: none;
 }
@@ -45,5 +92,325 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.sheardHeader {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/breadcrumb.jpg);
+  background-position: top center;
+  background-size: cover;
+  width: 100%;
+  height: 380px;
+}
+.sharderHeaderBackground {
+  background-color: #00000052;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+.sharderHeaderBackground h4 {
+  font-family: "Abril Fatface", serif;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  font-size: 64px;
+  text-transform: capitalize;
+  line-height: 1em;
+  z-index: 2;
+}
+.sharderHeaderBackground p {
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+}
+
+.contact-about-link:hover .about-contact-icon {
+  color: #fff;
+}
+
+.avatar-section-img {
+  position: relative;
+}
+.avatar-section-img::before {
+  position: absolute;
+  background-color: #0000005a;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+}
+
+.team-project-icons {
+  display: none;
+}
+
+.tema-project-img-card:hover .team-project-icons {
+  display: block;
+  transition: 1s ease-in;
+}
+.team-project-single-icon {
+  color: #969ba2;
+}
+.team-project-single-icon:hover {
+  color: #e46d30;
+}
+
+.woldExcitin-backgournd-img {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/ab_bg2.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+.woldExcitin-backgournd {
+  width: 100%;
+  height: 100%;
+  background-color: #0000006c;
+}
+.about-easy-booking-deatils-img {
+  background-color: #f6f8fb;
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/ab_deco1.png);
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: initial;
+}
+.about-travel-right-img {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/ab_img4.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 25% auto;
+}
+.about-travel-left-img {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/ab_img3.png);
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 25% auto;
+}
+
+/* Contact Page Auto paly Img strat */
+
+.about-page-auto-paly-img {
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 14));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 14));
+  }
+}
+.slider {
+  background: white;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before,
+.slider::after {
+  content: "";
+  height: 500px;
+  position: absolute;
+  width: 350px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 150s linear infinite running;
+  animation: scroll 150s linear infinite running;
+  display: flex;
+  width: calc(350px * 28);
+}
+.slider .slide {
+  height: 500px;
+  width: 350px;
+}
+.slide img {
+  border-radius: 8px;
+}
+
+/* Contact Page Auto paly Img End */
+
+/* tour */
+
+.single-tour-card {
+  overflow: hidden;
+}
+.single-tour-card:hover .img-tour {
+  transform: scale(1.5);
+  transition: 3s ease-in-out;
+}
+
+/* Rating Css  */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+}
+
+.star {
+  color: #ecbe1d;
+  font-size: 1em;
+}
+
+.filled {
+  color: #ecbe1d; /* Color for filled stars */
+}
+
+.half-filled {
+  color: #b8a971; /* Color for half-filled star */
+}
+
+.empty {
+  color: wheat; /* Color for empty stars */
+}
+
+.rating-value {
+  margin-left: 0.5em;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* ratin end  */
+.tour-page-other-section {
+  overflow: hidden;
+  border-radius: 3px;
+}
+.tour-page-other-section-bg-img,
+.tour-page-other-section-bg-img-1 {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/FAQ_banner1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.tour-page-other-section-bg-img-1 {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/07/FAQ_banner2.jpg);
+}
+
+.tour-page-other-section:hover .tour-page-other-section-bg-img {
+  transform: scale(1.2);
+  transition: 2s ease-in-out;
+}
+.tour-page-other-section:hover .tour-page-other-section-bg-img-1 {
+  transform: scale(1.2);
+  transition: 2s ease-in-out;
+}
+
+/* home  */
+
+.home-header-section-img {
+  transform: scale(1.2);
+  transition: 12s ease-in-out;
+  animation: scaleAnimation 12s infinite alternate;
+}
+
+/* Define keyframes for the animation */
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2); /* Scale to 1.2 times the original size */
+  }
+}
+/* home trip  start */
+.bg-color-trip {
+  background-color: white;
+  color: #000;
+}
+.background-trip-img-1:hover,
+.background-trip-img-2:hover,
+.background-trip-img-3:hover,
+.background-trip-img-4:hover,
+.background-trip-img-5:hover {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/12/h1_book1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-color-trip:hover {
+  background-color: #00000051;
+}
+.background-trip-img-2:hover {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/12/h1_book2.jpg);
+}
+.background-trip-img-3:hover {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/12/h7_book_boat.jpg);
+}
+.background-trip-img-4:hover {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/12/h1_book3.jpg);
+}
+.background-trip-img-5:hover {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/12/h7_food.jpg);
+}
+.background-trip-img-6:hover {
+  background-image: url(https://demo2.wpopal.com/zourney/wp-content/uploads/2022/12/h1_book4.jpg);
+}
+.bg-color-trip:hover .background-trip {
+  color: #fff;
+}
+.background-trip-icon {
+  transform: scale(1);
+  transition: 0.3s ease;
+}
+.bg-color-trip:hover .background-trip-icon {
+  transform: scale(1.05);
+}
+
+/* home trip end  */
+
+@media (max-width: 768px) {
+  .about-page-time {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .support-button-sm {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .about-travel-right-img {
+    background-image: none;
+  }
+  .about-travel-left-img {
+    background-image: none;
+  }
+  .about-custom-tarvel {
+    display: none;
+  }
+
+  .contact-home-page,
+  .tour-page-small-device {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .tour-page-fliter-section {
+    display: none;
   }
 }
