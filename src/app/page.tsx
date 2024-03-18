@@ -1,3 +1,5 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Choose from "@/components/ui/Choose";
 import Trip from "@/components/ui/Trip";
 import Calender from "@/components/ui/Calender";
@@ -11,21 +13,22 @@ import Destination from "@/components/ui/Destination";
 import HeaderSection from "@/components/home/HeaderSection";
 import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
 import Travel from "@/components/ui/Travel";
+import HomeHeaderSection from "@/components/home/HomeHeaderSection";
 
 export default function Home() {
   return (
     <div className="sdf">
-      <HeaderSection />
-      <div className="flex justify-center">
+      <HomeHeaderSection />
+      {/* <div className="flex justify-center">
         <Select></Select>
         <Select2></Select2>
         <Calender></Calender>
         <Guest></Guest>
         <Search></Search>
-      </div>
+      </div> */}
       <Card></Card>
-      <Destination></Destination>
-      <Expereience></Expereience>
+      {/* <Destination></Destination> */}
+      {/* <Expereience></Expereience> */}
       <Choose></Choose>
       <Trip></Trip>
       <Travel></Travel>

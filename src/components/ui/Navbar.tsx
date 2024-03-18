@@ -84,21 +84,21 @@ const Navbar = () => {
             </div>
             <Image
               src={logo}
-              width={100}
-              height={100}
+              width={120}
+              height={120}
               alt="Picture of the author"
             />
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 fw-fw-bold text-md">
+            <ul className="menu menu-horizontal px-1 fw-fw-bold text-md bg-none text-none ">
               <li>
                 <Link
                   href="/"
-                  className={
+                  className={`${
                     backgroundColor
                       ? "background-color-nav-section font-medium subHeaderTitle"
                       : "text-white nav-lg-section font-medium subHeaderTitle "
-                  }
+                  }  `}
                 >
                   HOME
                 </Link>
