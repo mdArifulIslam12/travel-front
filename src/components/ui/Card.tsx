@@ -5,11 +5,15 @@ import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { GoStopwatch } from "react-icons/go";
 import { motion } from "framer-motion";
+// import { useRouter } from "next/router";
 
 const Card = () => {
   const [data, setData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // const router = useRouter();
+  // const {slug} = router.query
+ 
   const nextSlider = useCallback(
     () =>
       setCurrentIndex((currentSlider) =>
@@ -45,6 +49,7 @@ const Card = () => {
   return (
     <div className="text-center mt-0">
       <p>Explore our Tours</p>
+      {/* <h1>Post {slug} </h1> */}
       <p className="text-5xl mt-4 font-bold">
         New And Most <br />{" "}
         <span className="text-5xl font-bold">Popular Tours</span>
