@@ -15,6 +15,7 @@ import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport
 import Travel from "@/components/ui/Travel";
 import HomeHeaderSection from "@/components/home/HomeHeaderSection";
 import ChooseSection from "@/components/home/choose";
+import DestinationPage from "@/components/Destination/DestinationPage";
 
 export default function Home() {
   return (
@@ -28,8 +29,8 @@ export default function Home() {
         <Search></Search>
       </div> */}
       <Card></Card>
-      {/* <Destination></Destination> */}
-      {/* <Expereience></Expereience> */}
+      <DestinationPage></DestinationPage>
+      <Expereience></Expereience>
       <Choose></Choose>
       <ChooseSection />
       <Trip></Trip>
