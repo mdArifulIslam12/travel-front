@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-const Destination = () => {
+const Destination = ({ continents }: { continents: any }) => {
+  const { asia, africa, europe, americas, antarctica } = continents;
   return (
     <div className="max-w-7xl mx-auto">
       <div className="my-8 mb-16">
@@ -26,7 +27,9 @@ const Destination = () => {
             </h4>
             <span className="destination-details-page-hover-section text-center">
               <p className="w-[80px] h-[2px] bg-red-500 my-[17px] "></p>
-              <p className="subHeaderTitle text-md font-bold">5 Tours+</p>
+              <p className="subHeaderTitle text-md font-bold">
+                {americas?.length} Tours+
+              </p>
             </span>
           </div>
         </div>
@@ -43,7 +46,9 @@ const Destination = () => {
             </h4>
             <span className="destination-details-page-hover-section text-center">
               <p className="w-[80px] h-[2px] bg-red-500 my-[17px] "></p>
-              <p className="subHeaderTitle text-md font-bold">6 Tours+</p>
+              <p className="subHeaderTitle text-md font-bold">
+                {africa?.length} Tours+
+              </p>
             </span>
           </div>
         </div>
@@ -58,11 +63,13 @@ const Destination = () => {
 
           <div className="destinationDetails">
             <h4 className="text-3xl font-bold text-white headerTitle ">
-              Americas
+              Europe
             </h4>
             <span className="destination-details-page-hover-section text-center">
               <p className="w-[80px] h-[2px] bg-red-500 my-[17px] "></p>
-              <p className="subHeaderTitle text-md font-bold">5 Tours+</p>
+              <p className="subHeaderTitle text-md font-bold">
+                {europe?.length} Tours+
+              </p>
             </span>
           </div>
         </div>
@@ -74,12 +81,12 @@ const Destination = () => {
           />
 
           <div className="destinationDetails">
-            <h4 className="text-3xl font-bold text-white headerTitle ">
-              Africa
-            </h4>
+            <h4 className="text-3xl font-bold text-white headerTitle ">Asia</h4>
             <span className="destination-details-page-hover-section text-center">
               <p className="w-[80px] h-[2px] bg-red-500 my-[17px] "></p>
-              <p className="subHeaderTitle text-md font-bold">6 Tours+</p>
+              <p className="subHeaderTitle text-md font-bold">
+                {asia?.length} Tours+
+              </p>
             </span>
           </div>
         </div>
@@ -92,11 +99,13 @@ const Destination = () => {
 
           <div className="destinationDetails">
             <h4 className="text-3xl font-bold text-white headerTitle ">
-              Africa
+              Antarctica
             </h4>
             <span className="destination-details-page-hover-section text-center">
               <p className="w-[80px] h-[2px] bg-red-500 my-[17px] "></p>
-              <p className="subHeaderTitle text-md font-bold">6 Tours+</p>
+              <p className="subHeaderTitle text-md font-bold">
+                {antarctica?.length} Tours+
+              </p>
             </span>
           </div>
         </div>

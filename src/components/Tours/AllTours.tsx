@@ -76,7 +76,7 @@ const AllTours = () => {
         }
       });
 
-    content = filteredData?.map((tour, index) => (
+    content = filteredData?.map((tour: any, index: any) => (
       <Tour tour={tour} key={index} />
     ));
   }

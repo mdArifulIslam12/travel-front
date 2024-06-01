@@ -20,10 +20,6 @@ const DestinationPage = () => {
   } else if (!isLoading && !isError && tours?.length == 0) {
     content = <div className="">Tour tag not found!!</div>;
   } else if (!isLoading && !isError && tours?.length > 0 && isSuccess) {
-    //   const filteredData = tours?.map((tour:any, index:any) => (
-    //     dsf
-    //   ));
-    console.log(tours);
     const filteredByContinentAsia = tours.filter(
       (tour: any) => tour.continents == "Asia"
     );
@@ -39,14 +35,17 @@ const DestinationPage = () => {
     const filteredByContinentAntarctica = tours.filter(
       (tour: any) => tour.continents == "Antarctica"
     );
-    console.log(filteredByContinentAfrica.length);
+    const continents: any = {
+      asia: filteredByContinentAsia,
+      europe: filteredByContinentEurope,
+      americas: filteredByContinentAmericas,
+      africa: filteredByContinentAfrica,
+      antarctica: filteredByContinentAntarctica,
+    };
+    content = <Destination continents={continents} />;
   }
 
-  return (
-    <>
-      <Destination />
-    </>
-  );
+  return <>{content}</>;
 };
 
 export default DestinationPage;
