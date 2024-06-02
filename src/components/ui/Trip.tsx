@@ -2,6 +2,7 @@
 
 import { useGetAllTourQuery } from "@/redux/api/tour/tourApi";
 import { ITour } from "@/types";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsCupHot } from "react-icons/bs";
 import { GiPaperBoat } from "react-icons/gi";
@@ -95,84 +96,127 @@ const Trip = () => {
           <div className="w-[100px] h-[1px] bg-[#E46D30] mx-auto my-12"></div>
         </div>
         <div className="grid lg:grid-cols-6 sm:grid-cols-1 gap-5 ">
-          <div className=" background-trip-img-1">
-            <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
-              <div className="text-center background-trip ">
-                <LiaMountainSolid className="mx-auto text-6xl mb-8 background-trip-icon " />
-                <h2 className="text-2xl font-bold mb-2">Adventure</h2>
-                <p className="mb-5 text-sm ">{adventure}+ Tours</p>
-                <p className="text-xl font-bold text-orange-500 ">
-                  {" "}
-                  <span className="text-sm text-[#969BA1]">from</span> $1204
-                </p>
+          <Link
+            href={{
+              pathname: "/tour/tripTour",
+              query: { categories: "Adventure" },
+            }}
+          >
+            <div className=" background-trip-img-1">
+              <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
+                <div className="text-center background-trip ">
+                  <LiaMountainSolid className="mx-auto text-6xl mb-8 background-trip-icon " />
+                  <h2 className="text-2xl font-bold mb-2">Adventure</h2>
+                  <p className="mb-5 text-sm ">{adventure}+ Tours</p>
+                  <p className="text-xl font-bold text-orange-500 ">
+                    {" "}
+                    <span className="text-sm text-[#969BA1]">from</span> $1204
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" background-trip-img-2">
-            <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
-              <div className="text-center background-trip ">
-                <TbBeach className="mx-auto text-6xl mb-8 background-trip-icon " />
-                <h2 className="text-2xl font-bold mb-2">Beaches</h2>
-                <p className="mb-5 text-sm ">{beach}+ Tours</p>
-                <p className="text-xl font-bold text-orange-500 ">
-                  {" "}
-                  <span className="text-sm text-[#969BA1]">from</span> $1040
-                </p>
+          </Link>
+
+          <Link
+            href={{
+              pathname: "/tour/tripTour",
+              query: { categories: "Beaches" },
+            }}
+          >
+            <div className=" background-trip-img-2">
+              <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
+                <div className="text-center background-trip ">
+                  <TbBeach className="mx-auto text-6xl mb-8 background-trip-icon " />
+                  <h2 className="text-2xl font-bold mb-2">Beaches</h2>
+                  <p className="mb-5 text-sm ">{beach}+ Tours</p>
+                  <p className="text-xl font-bold text-orange-500 ">
+                    {" "}
+                    <span className="text-sm text-[#969BA1]">from</span> $1040
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" background-trip-img-3">
-            <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
-              <div className="text-center background-trip ">
-                <GiPaperBoat className="mx-auto text-6xl mb-8 background-trip-icon " />
-                <h2 className="text-2xl font-bold mb-2">Boat Tours</h2>
-                <p className="mb-5 text-sm ">{boat}+ Tours</p>
-                <p className="text-xl font-bold text-orange-500 ">
-                  {" "}
-                  <span className="text-sm text-[#969BA1]">from</span> $1000
-                </p>
+          </Link>
+          <Link
+            href={{
+              pathname: "/tour/tripTour",
+              query: { categories: "Boat Tours" },
+            }}
+          >
+            <div className=" background-trip-img-3">
+              <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
+                <div className="text-center background-trip ">
+                  <GiPaperBoat className="mx-auto text-6xl mb-8 background-trip-icon " />
+                  <h2 className="text-2xl font-bold mb-2">Boat Tours</h2>
+                  <p className="mb-5 text-sm ">{boat}+ Tours</p>
+                  <p className="text-xl font-bold text-orange-500 ">
+                    {" "}
+                    <span className="text-sm text-[#969BA1]">from</span> $1000
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" background-trip-img-4">
-            <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
-              <div className="text-center background-trip ">
-                <MdOutlineHomeWork className="mx-auto text-6xl mb-8 background-trip-icon " />
-                <h2 className="text-2xl font-bold mb-2">City Tours</h2>
-                <p className="mb-5 text-sm ">{city}+ Tours</p>
-                <p className="text-xl font-bold text-orange-500 ">
-                  {" "}
-                  <span className="text-sm text-[#969BA1]">from</span> $1020
-                </p>
+          </Link>
+          <Link
+            href={{
+              pathname: "/tour/tripTour",
+              query: { categories: "City Tours" },
+            }}
+          >
+            <div className=" background-trip-img-4">
+              <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
+                <div className="text-center background-trip ">
+                  <MdOutlineHomeWork className="mx-auto text-6xl mb-8 background-trip-icon " />
+                  <h2 className="text-2xl font-bold mb-2">City Tours</h2>
+                  <p className="mb-5 text-sm ">{city}+ Tours</p>
+                  <p className="text-xl font-bold text-orange-500 ">
+                    {" "}
+                    <span className="text-sm text-[#969BA1]">from</span> $1020
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" background-trip-img-5">
-            <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
-              <div className="text-center background-trip ">
-                <BsCupHot className="mx-auto text-6xl mb-8 background-trip-icon  " />
-                <h2 className="text-2xl font-bold mb-2">Food</h2>
-                <p className="mb-5 text-sm ">{food}+ Tours</p>
-                <p className="text-xl font-bold text-orange-500 ">
-                  {" "}
-                  <span className="text-sm text-[#969BA1]">from</span> $204
-                </p>
+          </Link>
+          <Link
+            href={{
+              pathname: "/tour/tripTour",
+              query: { categories: "Food" },
+            }}
+          >
+            <div className=" background-trip-img-5">
+              <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
+                <div className="text-center background-trip ">
+                  <BsCupHot className="mx-auto text-6xl mb-8 background-trip-icon  " />
+                  <h2 className="text-2xl font-bold mb-2">Food</h2>
+                  <p className="mb-5 text-sm ">{food}+ Tours</p>
+                  <p className="text-xl font-bold text-orange-500 ">
+                    {" "}
+                    <span className="text-sm text-[#969BA1]">from</span> $204
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" background-trip-img-6">
-            <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
-              <div className="text-center background-trip ">
-                <LuTrees className="mx-auto text-6xl mb-8 background-trip-icon " />
-                <h2 className="text-2xl font-bold mb-2">Hiking</h2>
-                <p className="mb-5 text-sm ">{hinking}+ Tours</p>
-                <p className="text-xl font-bold text-orange-500 ">
-                  {" "}
-                  <span className="text-sm text-[#969BA1]">from</span> $1404
-                </p>
+          </Link>
+          <Link
+            href={{
+              pathname: "/tour/tripTour",
+              query: { categories: "Hiking" },
+            }}
+          >
+            <div className=" background-trip-img-6">
+              <div className=" bg-color-trip   p-[30px] rounded py-[45px]  ">
+                <div className="text-center background-trip ">
+                  <LuTrees className="mx-auto text-6xl mb-8 background-trip-icon " />
+                  <h2 className="text-2xl font-bold mb-2">Hiking</h2>
+                  <p className="mb-5 text-sm ">{hinking}+ Tours</p>
+                  <p className="text-xl font-bold text-orange-500 ">
+                    {" "}
+                    <span className="text-sm text-[#969BA1]">from</span> $1404
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

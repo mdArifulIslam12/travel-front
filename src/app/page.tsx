@@ -17,6 +17,7 @@ import HomeHeaderSection from "@/components/home/HomeHeaderSection";
 import ChooseSection from "@/components/home/choose";
 import DestinationPage from "@/components/Destination/DestinationPage";
 import AboutTravelersTrip from "@/components/aboutUs/AboutTravelersTrip";
+import HomeDestination from "@/components/home/HomeDestination";
 
 export default function Home() {
   return (
@@ -30,12 +31,12 @@ export default function Home() {
         <Search></Search>
       </div> */}
       <Card></Card>
-      <DestinationPage></DestinationPage>
+      <HomeDestination></HomeDestination>
       <Expereience></Expereience>
       <Choose></Choose>
       <ChooseSection />
       <Trip></Trip>
-      <Travel></Travel>
+      {/* <Travel></Travel> */}
       <AboutTravelersTrip />
       <SheardNewsletterSupport />
     </div>
