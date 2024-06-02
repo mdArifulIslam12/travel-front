@@ -58,7 +58,7 @@ const ChooseSection = () => {
                 deposit to an unknown tour operator, is your money safe? Are the
                 reviews seen on a local operators website genuine?
               </p>
-              <Link href={"/"}>
+              <Link href={"/contact"}>
                 <button className="mt-8 text-md w-56 h-14 before:absolute border-[1px] border-black before:block before:inset-0 before:-z-10 before:bg-none text-black after:block hover:after:w-full after:w-0 after:hover:left-0 after:right-0 after:top-0 after:h-full after:-z-10 after:duration-300 after:bg-orange-400 after:absolute relative  inline-block hover:border-none hover:text-white font-bold subHeaderTitle rounded-md  contact-about-link ">
                   <div className="flex justify-center items-center">
                     <div>Contact Us</div>

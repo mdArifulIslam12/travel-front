@@ -11,7 +11,7 @@ const Tour = ({ tour }: any) => {
   return (
     <div className="card lg:max-w-lg bg-base-100 shadow-xl single-tour-card ">
       <figure className="h-[280px]">
-        <Link href={`tour/${tour?._id}`}>
+        <Link href={`/tour/${tour?._id}`}>
           <img src={image} alt="tour img" className="img-tour h-[280px] " />
         </Link>
       </figure>
@@ -19,7 +19,7 @@ const Tour = ({ tour }: any) => {
         <p className="text-md font-normal text-[#969BA1]">
           {city},{country}
         </p>
-        <Link href={`tour/${tour?._id}`}>
+        <Link href={`/tour/${tour?._id}`}>
           <h2 className="text-2xl text-black font-semibold hover:text-[#e46d30] ">
             {title}
           </h2>
@@ -42,7 +42,7 @@ const Tour = ({ tour }: any) => {
             </span>{" "}
           </p>
           <div className="card-actions justify-end">
-            <Link href={`tour/${tour?._id}`}>
+            <Link href={`/tour/${tour?._id}`}>
               <button className="text-md font-semibold hover:text-[#e46d30] ">
                 <div className="flex justify-center items-center">
                   <div>More Information</div>

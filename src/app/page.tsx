@@ -16,6 +16,7 @@ import Travel from "@/components/ui/Travel";
 import HomeHeaderSection from "@/components/home/HomeHeaderSection";
 import ChooseSection from "@/components/home/choose";
 import DestinationPage from "@/components/Destination/DestinationPage";
+import AboutTravelersTrip from "@/components/aboutUs/AboutTravelersTrip";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       <ChooseSection />
       <Trip></Trip>
       <Travel></Travel>
+      <AboutTravelersTrip />
       <SheardNewsletterSupport />
     </div>
   );

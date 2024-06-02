@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import SheardHeader from "@/components/Sheard/SheardHeader";
@@ -7,8 +8,13 @@ import OtherStaticTour from "@/components/Tours/OtherStaticTour";
 import Tour from "@/components/Tours/tour";
 import { useGetAllTourDbFromQuery } from "@/redux/api/tour/tourApi";
 
-const DestinationContinentsPage = ({ params }: { params: any }) => {
+const DestinationContinentsPage = ({
+  params,
+}: {
+  params: { destinationContinents: string };
+}) => {
   const continentsAll: string = params.destinationContinents;
+
   const {
     data: tours,
     isLoading,
