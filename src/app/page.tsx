@@ -18,6 +18,7 @@ import ChooseSection from "@/components/home/choose";
 import DestinationPage from "@/components/Destination/DestinationPage";
 import AboutTravelersTrip from "@/components/aboutUs/AboutTravelersTrip";
 import HomeDestination from "@/components/home/HomeDestination";
+import HomeTourSection from "@/components/home/homeTourSection";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
         <Guest></Guest>
         <Search></Search>
       </div> */}
-      <Card></Card>
+      <HomeTourSection></HomeTourSection>
       <HomeDestination></HomeDestination>
       <Expereience></Expereience>
       <Choose></Choose>

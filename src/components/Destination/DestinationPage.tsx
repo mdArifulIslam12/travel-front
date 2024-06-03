@@ -1,9 +1,5 @@
 "use client";
-import {
-  useGetAllTourDbFromQuery,
-  useGetAllTourQuery,
-} from "@/redux/api/tour/tourApi";
-import { useState } from "react";
+import { useGetAllTourDbFromQuery } from "@/redux/api/tour/tourApi";
 import Destination from "../ui/Destination";
 
 const DestinationPage = () => {

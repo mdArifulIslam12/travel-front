@@ -11,7 +11,7 @@ const Destination = ({ continents }: { continents: any }) => {
         <p className="text-center mt-28 subHeaderTitle ">
           Choose Your Experience
         </p>
-        <p className=" headerTitle text-6xl text-center mt-6 text-black font-bold">
+        <p className=" headerTitle text-5xl text-center mt-6 text-black font-bold">
           Top Attractions <br /> Destinations
         </p>
       </div>
