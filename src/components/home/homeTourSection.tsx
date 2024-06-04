@@ -1,12 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useGetAllTourDbFromQuery } from "@/redux/api/tour/tourApi";
 import Tour from "../Tours/tour";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import {
+  IoIosArrowBack,
+  IoIosArrowForward,
+  IoIosArrowRoundForward,
+} from "react-icons/io";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { GoStopwatch } from "react-icons/go";
+import Link from "next/link";
 
 const CustomPrevArrow = (props: any) => {
   const { onClick } = props;
@@ -46,37 +52,55 @@ const HomeTourSection = () => {
   } else if (!isLoading && !isError && tours?.length == 0) {
     content = <div className="">Tour tag not found!!</div>;
   } else if (!isLoading && !isError && tours?.length > 0 && isSuccess) {
-    content = tours?.map((tour: any, index: any) => (
+    content = tours?.slice(0, 10)?.map((tour: any, index: any) => (
       <div
         key={tour.id}
-        className="card max-w-72 mx-2 inset-0 bg-black opacity-90 h-[400px] rounded-sm shadow-lg overflow-hidden"
+        className="card max-w-72 mx-2 inset-0 bg-black opacity-90 h-[380px] rounded-sm shadow-lg overflow-hidden home-tour-detilesHover "
       >
-        <div
-          className="bg-black opacity-90"
-          style={{
-            backgroundImage: `url(${tour.image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            zIndex: -1,
-          }}
-        >
-          <div className="p-4 text-left">
+        <div className="home-tour-img">
+          <img
+            className="tour-home-imgHover"
+            src={tour.image}
+            style={{
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              zIndex: -12,
+              height: "400px",
+              width: "100%",
+              position: "absolute",
+            }}
+            alt=""
+          />
+          <div
+            className="p-4 text-left "
+            // style={{
+            //   zIndex: 1,
+            // }}
+          >
             <div className="flex justify-between">
               <p className="text-amber-500 w-16 rounded-md">{"sdfds"}</p>
               <p className="text-white font-semibold">From {tour.price}</p>
             </div>
             <div className="mt-36 ml-4">
               <p className="text-white   mb-2">{tour.city}</p>
-              <h3 className="text-xl text-white hover:text-orange-500 font-semibold mb-2">
-                {tour.title}
-              </h3>
+
+              <Link href={`/tour/${tour?._id}`}>
+                <h3 className="text-xl text-white hover:text-orange-500 font-semibold mb-2">
+                  {tour.title.slice(0, 35)}
+                </h3>
+              </Link>
               <div className="flex text-white mb-1 items-center gap-2">
                 <GoStopwatch />
                 <p className="">{tour.duration}</p>
               </div>
-              <button className="mt- mb-8 text-sm w-56 h-14 before:absolute border-[1px] border-slate-50 before:block before:inset-0 before:-z-10 before:bg-none text-black after:block hover:after:w-full after:w-0 after:hover:left-0 after:right-0 after:top-0 after:h-full after:-z-10 after:duration-300 after:bg-orange-400 after:absolute relative  inline-block">
-                More Information{" "}
-              </button>
+              <Link href={`/tour/${tour?._id}`}>
+                <button className=" text-sm w-56 h-14 before:absolute border-[1px] border-slate-50 before:block before:inset-0 before:-z-10 before:bg-none text-white after:block hover:after:w-full after:w-0 after:hover:left-0 after:right-0 after:top-0 after:h-full after:-z-10 after:duration-300 after:bg-orange-400 after:absolute relative  inline-block hover:border-none">
+                  <div className="flex justify-center items-center ">
+                    <div>More Information</div>
+                    <IoIosArrowRoundForward className="text-[30px] font-bold subHeaderTitle text-[#fff] " />
+                  </div>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

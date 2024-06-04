@@ -460,6 +460,29 @@ p {
 .destination-page-img-before:hover .destinationDetails {
   bottom: 30%;
 }
+/* home page tour card strat */
+.home-tour-img {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.home-tour-img::before {
+  position: absolute;
+  background-color: #00000081;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -11;
+}
+.tour-home-imgHover {
+  transition: all 0.3s ease;
+}
+.home-tour-detilesHover:hover .tour-home-imgHover {
+  transform: scale(1.09);
+}
+/* home page tour card end */
 /* Destination Page End  */
 
 @media (max-width: 768px) {
