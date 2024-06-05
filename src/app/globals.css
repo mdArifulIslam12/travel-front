@@ -61,6 +61,7 @@ p {
   background-color: white;
   color: #000;
 }
+
 .background-color-nav-section {
   color: #000;
 }
@@ -468,8 +469,9 @@ p {
 }
 .home-tour-img::before {
   position: absolute;
-  background-color: #000;
-  opacity: 0.5;
+  /* background-color: #000;
+  opacity: 0.5; */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   width: 100%;
   height: 100%;
   content: "";
@@ -512,5 +514,9 @@ p {
   }
   .tour-page-fliter-section {
     display: none;
+  }
+  .small-device-sheard {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }

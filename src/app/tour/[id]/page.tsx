@@ -2,7 +2,6 @@
 import SheardHeader from "@/components/Sheard/SheardHeader";
 import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
 import { useGetSingleTourQuery } from "@/redux/api/tour/tourApi";
-import { useRouter } from "next/router";
 
 const TourDetails = ({ params }: { params: any }) => {
   const {

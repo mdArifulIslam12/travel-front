@@ -19,7 +19,7 @@ const CustomPrevArrow = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className={`w-16 h-16 sheardButtonIcons about-custom-tarvel absolute -left-24 top-[25%] bg-white shadow-sm  rounded-full`}
+      className={`w-16 h-16 sheardButtonIcons about-custom-tarvel absolute -left-20 top-[43%] bg-white shadow-sm  rounded-full`}
     >
       <IoIosArrowBack className="text-xl ml-[23px] text-[#e46d30]" />
     </button>
@@ -31,7 +31,7 @@ const CustomNextArrow = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className={`w-16 h-16 sheardButtonIcons about-custom-tarvel absolute -right-24 top-[26%] bg-white shadow-sm  rounded-full `}
+      className={`w-16 h-16 sheardButtonIcons about-custom-tarvel absolute -right-20 top-[43%] bg-white shadow-sm  rounded-full `}
     >
       <IoIosArrowForward className="text-xl ml-[25px] text-[#e46d30] " />
     </button>
@@ -78,9 +78,11 @@ const HomeTourSection = () => {
             // }}
           >
             <div className="flex justify-between">
-              <p className="bg-amber-500 font-semibold text-[12px] rounded-md text-white px-1 py-[1px] uppercase ">
-                {tour?.tourType}
-              </p>
+              {tour.tourType && (
+                <p className="bg-amber-500 font-semibold text-[12px] rounded-md text-white px-1 pt-[4px] uppercase ">
+                  {tour?.tourType}
+                </p>
+              )}
               <p className="text-white font-semibold">From {tour.price}</p>
             </div>
             <div className="mt-36 ml-4">
@@ -122,24 +124,28 @@ const HomeTourSection = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false, // Enable autoplay
+    autoplay: true, // Enable autoplay
     autoplaySpeed: 4000, // Autoplay interval in milliseconds (e.g., 2000ms = 2 seconds)
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
 
   return (
-    <div className="max-w-7xl mx-auto my-12 ">
-      <div className="my-8 mb-16">
-        <p className="text-center mt-28 subHeaderTitle ">Explore our Tours</p>
-        <p className=" headerTitle text-5xl text-center mt-6 text-black font-bold">
-          New And Most <br /> Popular Tours
-        </p>
-        <div className="w-[100px] h-[1px] bg-[#E46D30] mx-auto mt-6 mb-16"></div>
+    <div className="overflow-hidden ">
+      <div className="max-w-7xl mx-auto my-12 ">
+        <div className="my-8 mb-16">
+          <p className="text-center mt-28 subHeaderTitle ">Explore our Tours</p>
+          <p className=" headerTitle text-5xl text-center mt-6 text-black font-bold">
+            New And Most <br /> Popular Tours
+          </p>
+          <div className="w-[100px] h-[1px] bg-[#E46D30] mx-auto mt-6 mb-16"></div>
+        </div>
+        <Slider {...settings}>
+          {/* <div className="grid lg:grid-cols-4 sm:grid-cols-1 lg:gap-5 gap-y-7 "> */}
+          {content}
+          {/* </div> */}
+        </Slider>
       </div>
-      <Slider {...settings}>
-        {/* <div className="grid lg:grid-cols-4 sm:grid-cols-1 lg:gap-5 gap-y-7 "> */}
-        {content}
-        {/* </div> */}
-      </Slider>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import Link from "next/link";
 const Destination = ({ continents }: { continents: any }) => {
   const { asia, africa, europe, americas, antarctica } = continents;
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto small-device-sheard">
       <div className="my-8 mb-16">
         <p className="text-center mt-28 subHeaderTitle ">
           Choose Your Experience

@@ -27,6 +27,11 @@ const Navbar = () => {
       window?.removeEventListener("scroll", allScroolId);
     };
   }, []);
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
 
   return (
     <div
@@ -62,8 +67,14 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  "
               >
-                <li>
-                  <Link href="/">HOME</Link>
+                <li className={isActive ? "text-red-500" : ""}>
+                  <Link
+                    href="/"
+                    className={isActive ? "text-red-500" : ""}
+                    onClick={handleClick}
+                  >
+                    HOME
+                  </Link>
                 </li>
                 <li>
                   <Link href="/tour">TOURS</Link>
