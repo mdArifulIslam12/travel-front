@@ -1,9 +1,10 @@
 "use client";
 import SheardHeader from "@/components/Sheard/SheardHeader";
 import SheardNewsletterSupport from "@/components/Sheard/SheardNewsletterSupport";
+import TourDetails from "@/components/singleTourPage/TourDetails";
 import { useGetSingleTourQuery } from "@/redux/api/tour/tourApi";
 
-const TourDetails = ({ params }: { params: any }) => {
+const TourDetailsPage = ({ params }: { params: any }) => {
   const {
     data: tour,
     isLoading,
@@ -22,10 +23,12 @@ const TourDetails = ({ params }: { params: any }) => {
   return (
     <div>
       <SheardHeader title="Tour Details" subTitle="Tour Details" />
-      <div className="max-w-7xl mx-auto my-8">{content?.title}</div>
+      <div className="max-w-7xl mx-auto my-8">
+        <TourDetails tour={content} />
+      </div>
       <SheardNewsletterSupport />
     </div>
   );
 };
 
-export default TourDetails;
+export default TourDetailsPage;
