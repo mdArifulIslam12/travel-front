@@ -14,7 +14,7 @@ const tourApi = baseApi.injectEndpoints({
           meta,
         };
       },
-      providesTags: ["tours"],
+      providesTags: ["blogs"],
     }),
     getAllBlogDbFrom: builder.query({
       query: () => ({
@@ -39,7 +39,7 @@ const tourApi = baseApi.injectEndpoints({
         method: "POST",
         body: data,
       }),
-      invalidatesTags: ["tours"],
+      invalidatesTags: ["blogs"],
     }),
     deleteBlog: builder.mutation({
       query: (id: any) => ({
