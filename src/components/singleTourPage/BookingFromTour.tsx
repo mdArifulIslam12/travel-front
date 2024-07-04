@@ -65,11 +65,9 @@ const BookingFromTour = ({ tour }: { tour: any }) => {
       userId: "65dd8d234110adfe0e89c988",
     };
 
-    const res = await addBooking(bookingTour);
+    const res = await addBooking(bookingTour).unwrap();
     if (!!res) {
-      // message.success("AC Department added successfully");
-      console.log("Booking added successfully");
-      // router.push("/");
+      router.push(`/payment/${res._id}`);
     }
 
     // if (isSuccess) {
