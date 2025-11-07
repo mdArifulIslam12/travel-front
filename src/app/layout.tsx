@@ -8,8 +8,8 @@ import Footer from "@/components/ui/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Travel and Tour",
-  description: "Travel home page",
+  title: "Smart Hospital",
+  description: "Smart Home page",
 };
 
 export default function RootLayout({
